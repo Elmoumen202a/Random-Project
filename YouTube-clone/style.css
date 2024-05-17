@@ -1,0 +1,57 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the header */
+header {
+    background-color: #ff0000; /* YouTube red */
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Styling for the search input */
+header input {
+    width: 300px;
+    padding: 5px;
+}
+
+/* Main section styling */
+main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Styling for each video card */
+.video {
+    width: 300px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Styling for the video thumbnail */
+.video img {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Styling for the video title */
+.video h2 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+/* Styling for the video description */
+.video p {
+    font-size: 14px;
+    color: #555;
+}
