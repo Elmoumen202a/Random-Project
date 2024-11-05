@@ -1,0 +1,106 @@
+/* Basic reset for margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Setting background and centering elements */
+body, html {
+    height: 100%;
+    overflow: hidden;
+    background-color: #0d0c1d; /* Dark background for night effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Main scene container */
+.scene {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* The moon with a glow effect */
+.moon {
+    position: absolute;
+    top: 10%; /* Position near the top */
+    left: 75%; /* Right side of the screen */
+    width: 150px;
+    height: 150px;
+    background-color: #ffff99; /* Soft yellow color */
+    border-radius: 50%; /* Circle shape */
+    box-shadow: 0 0 20px #ffff99, 0 0 40px #ffff99; /* Glowing effect */
+}
+
+/* Bats with animation across the screen */
+.bat {
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    background: black; /* Bat color */
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 60% 60%, 40% 100%, 20% 60%); /* Creates bat shape */
+    animation: fly 8s linear infinite; /* Flying animation */
+}
+
+/* Different starting positions and delays for each bat */
+.bat1 { top: 30%; left: -10%; animation-delay: 0s; }
+.bat2 { top: 50%; left: -20%; animation-delay: 3s; }
+.bat3 { top: 70%; left: -15%; animation-delay: 5s; }
+
+/* Flying animation keyframes */
+@keyframes fly {
+    0% { transform: translateX(0) rotate(0deg); }
+    50% { transform: translateX(150vw) rotate(20deg); }
+    100% { transform: translateX(200vw) rotate(0deg); }
+}
+
+/* The pumpkin with flickering effect */
+.pumpkin {
+    position: absolute;
+    bottom: 10%; /* Near the bottom of the screen */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    width: 80px;
+    height: 80px;
+    background-color: #ff7518; /* Pumpkin orange */
+    border-radius: 50%; /* Circular pumpkin */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px #ff7518;
+    animation: flicker 0.5s infinite alternate; /* Flickering effect */
+}
+
+/* Flicker effect keyframes */
+@keyframes flicker {
+    from { box-shadow: 0 0 10px #ff7518; }
+    to { box-shadow: 0 0 20px #ffae42; }
+}
+
+/* Pumpkin's eyes and mouth */
+.eye {
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%; /* Circular eyes */
+    position: absolute;
+    top: 25%;
+}
+
+/* Left and right positions for eyes */
+.left-eye { left: 25%; }
+.right-eye { right: 25%; }
+
+/* Mouth shape for the pumpkin */
+.mouth {
+    width: 30px;
+    height: 10px;
+    background: black;
+    position: absolute;
+    bottom: 15%; /* Slightly above the bottom */
+    border-radius: 0 0 30px 30px; /* Curved mouth */
+}
